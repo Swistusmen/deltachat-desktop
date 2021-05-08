@@ -4,8 +4,11 @@ pipeline {
 	     stage('Build') {
             steps {
                 echo 'Build..'
-		    	sh 'apt update'
-		        sh '/usr/bin/npm install'
+		    	 sh 'apt install npm -y'
+                	sh 'npm i npm@latest -g'
+                	sh 'npm fund'
+                	sh 'npm install'
+                	sh 'npm run build'
             }
 	  }
         stage('Test') {
