@@ -1,14 +1,10 @@
 pipeline {
-	agent {
-        docker {
-          image 'node:10.11.0-alpine'
-        }
-     }
 	
     stages {
 	     stage('Build') {
             steps {
                 echo 'Build..'
+		    	sh 'apt update'
 		        sh '/usr/bin/npm install'
             }
 	  }
