@@ -4,10 +4,7 @@ pipeline {
     stages {
 	     stage('Build') {
             steps {
-                echo 'Build..'
-		     echo 'Building..'
-                sh 'npm i npm@latest -g'
-                sh 'npm fund'
+                echo 'Build..'           
                 sh 'npm install'
                 sh 'npm run build'
             }
