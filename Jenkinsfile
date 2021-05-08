@@ -7,12 +7,25 @@ pipeline {
                 echo 'Build..'           
                 sh 'npm install'
                 sh 'npm run build'
+		script 	{
+                    last_stage = env.STAGE_NAME
+				}
             }
 	  }
         stage('Test') {
             steps {
-                echo 'Testing..'
-		        sh 'npm run test'
+		        script{
+                    last_stage = env.STAGE_NAME		
+									
+					if("${currentBuild.currentResult}"=='SUCCESS'){			
+					echo 'Testing..'				 
+					sh 'npm run test' 
+						}	
+					else{
+					echo "Build status: ${currentBuild.currentResult}"
+					}  
+					
+				}
             }
         } 
     }
