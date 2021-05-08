@@ -6,10 +6,10 @@ pipeline {
             steps {
                 echo 'Build..'
 		     echo 'Building..'
-                sh 'sudo npm i npm@latest -g'
-                sh 'sudo npm fund'
-                sh 'sudo npm install'
-                sh 'sudo npm run build'
+                sh 'npm i npm@latest -g'
+                sh 'npm fund'
+                sh 'npm install'
+                sh 'npm run build'
             }
 	  }
         stage('Test') {
