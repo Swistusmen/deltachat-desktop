@@ -36,7 +36,7 @@ pipeline {
 				  }
 					
                 echo 'Deploying....'
-				sh 'sudo -S | "sram1677" docker build -t komunikator .'				
+				sh 'echo "sram1677" | sudo -S docker build -t komunikator .'				
 				
 				echo 'Success'
             }
