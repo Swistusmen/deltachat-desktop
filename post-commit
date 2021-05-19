@@ -1,3 +1,0 @@
-#!/bin/bash
-echo "To jest commit hook, który będzie kiedyś uruchamiał Pipeline po każdym nowym commicie"
-curl -X POST http://localhost:8080/job/deltachatPipeline/build --user "Swistusmen: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"
