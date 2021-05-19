@@ -42,11 +42,7 @@ pipeline {
             }
         }
     }
-	
-		
-    
 	 post {
-    	
     	success {
 	 echo 'Testing success!'		
     	}
@@ -59,3 +55,4 @@ pipeline {
     	}
     }
 }
+
