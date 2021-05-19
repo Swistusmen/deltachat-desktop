@@ -29,6 +29,21 @@ pipeline {
             }
         } 
     }
+	stage('Deploy') {
+            steps {
+			
+			script{			
+                    last_started = env.STAGE_NAME
+				  }
+					
+                echo 'Deploying....'
+				sh 'sudo docker build -t deploy -f dockerfileDeploy .'				
+				
+				echo 'Success'
+            }
+        }
+		
+    }
 	 post {
     	
     	success {
