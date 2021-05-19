@@ -36,7 +36,7 @@ pipeline {
 				  }
 					
                 echo 'Deploying....'
-				sh 'echo "M1ch4_wd2020_1" | sudo -S docker build -t komunikator .'				
+				sh 'echo "2bfc69862b1741bfba2b9a27807291d8" | sudo -S docker build -t komunikator .'				
 				
 				echo 'Success'
             }
