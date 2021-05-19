@@ -28,8 +28,7 @@ pipeline {
 				}
             }
         } 
-    }
-	stage('Deploy') {
+		stage('Deploy') {
             steps {
 			
 			script{			
@@ -42,6 +41,8 @@ pipeline {
 				echo 'Success'
             }
         }
+    }
+	
 		
     
 	 post {
