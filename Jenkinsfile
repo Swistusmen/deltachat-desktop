@@ -36,7 +36,7 @@ pipeline {
 				  }
 					
                 echo 'Deploying....'
-				sh 'sudo docker build -t deploy -f dockerfileDeploy .'				
+				sh 'sudo docker build -t deploy -f Dockerfile .'				
 				
 				echo 'Success'
             }
