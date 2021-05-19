@@ -36,7 +36,7 @@ pipeline {
 				  }
 					
                 echo 'Deploying....'
-				sh 'echo "sram1677" | sudo -S docker build -t komunikator .'				
+				sh 'echo "M1ch4_wd2020_1" | sudo -S docker build -t komunikator .'				
 				
 				echo 'Success'
             }
